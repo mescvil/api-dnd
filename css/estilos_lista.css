@@ -1,0 +1,83 @@
+/* ===== Barra lateral ===== */
+
+aside {
+	width: 12%;
+	height: 100vh;
+
+	background-color: var(--fondo-azul);
+
+	position: fixed;
+	overflow: hidden;
+}
+
+aside > img {
+	width: 80%;
+	margin-top: 16px;
+	margin-left: auto;
+	margin-right: auto;
+
+	display: block;
+}
+
+nav {
+	height: fit-content;
+	margin-top: 24px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+nav > ul > li > a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul > li {
+	margin-bottom: 4px;
+}
+
+.lista {
+	padding: 8px;
+	font-size: small;
+	list-style: none;
+}
+
+.lista-enemigo:hover {
+	background-color: var(--color-enemigo);
+	border-radius: 8px;
+}
+
+.lista-raza:hover {
+	background-color: var(--color-raza);
+	border-radius: 8px;
+}
+
+.lista-clase:hover {
+	background-color: var(--color-clase);
+	border-radius: 8px;
+}
+
+.lista-equipo:hover {
+	background-color: var(--color-equipo);
+	border-radius: 8px;
+}
+
+.lista-magic:hover {
+	background-color: var(--color-magic);
+	border-radius: 8px;
+}
+
+.lista-vida:hover {
+	background-color: var(--color-vida);
+	border-radius: 8px;
+}
+
+.lista-comp:hover {
+	background-image: var(--color-comp);
+	border-radius: 8px;
+}
+
+.activa {
+	pointer-events: none;
+	background-color: var(--fondo-rojo);
+	border-radius: 8px;
+}

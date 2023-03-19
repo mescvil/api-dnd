@@ -1,0 +1,22 @@
+:root {
+    --fondo-negro: #1e2533;
+    --fondo-azul: #12181cff;
+    --fondo-azul-hover: rgb(25, 33, 38);
+    --fondo-rojo: #940b0c;
+    --texto-gris: #cdcecf;
+
+    --color-enemigo: #005c1968;
+    --color-raza: #9c870268;
+    --color-clase: #ff6a0068;
+    --color-equipo: #6e6d6d68;
+    --color-magic: #00189068;
+    --color-vida: #70033468;
+    --color-comp: linear-gradient(-45deg,
+            rgba(255, 106, 0, 0.422) 50%,
+            rgba(112, 3, 52, 0.68) 50%);
+}
+
+@font-face {
+    font-family: NotoSans;
+    src: url(../fonts/NotoSans-Regular.ttf);
+}
