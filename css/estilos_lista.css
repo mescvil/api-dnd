@@ -10,8 +10,8 @@ aside {
 	overflow: hidden;
 }
 
-aside > img {
-	width: 80%;
+aside>img {
+	width: 40%;
 	margin-top: 16px;
 	margin-left: auto;
 	margin-right: auto;
@@ -26,16 +26,15 @@ nav {
 	margin-right: 8px;
 }
 
-nav > ul > li > a {
+nav>ul>a {
 	text-decoration: none;
 	color: inherit;
 }
 
-ul > li {
-	margin-bottom: 4px;
-}
+
 
 .lista {
+	margin-bottom: 4px;
 	padding: 8px;
 	font-size: small;
 	list-style: none;
@@ -73,6 +72,11 @@ ul > li {
 
 .lista-comp:hover {
 	background-image: var(--color-comp);
+	border-radius: 8px;
+}
+
+.lista-inicio:hover {
+	background-color: var(--color-inicio);
 	border-radius: 8px;
 }
 

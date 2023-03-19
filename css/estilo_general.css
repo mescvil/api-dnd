@@ -16,6 +16,8 @@ body {
 /* ===== Interior ===== */
 
 #main {
+    width: 88%;
+
     padding: 8px;
     margin-left: 12%;
 
@@ -23,19 +25,38 @@ body {
 }
 
 #banner {
-    width: calc(100%-16px);
-    height: 400px;
+    width: 100%;
+    height: fit-content;
+
+    position: relative;
 }
 
 #banner>img {
     width: 100%;
-    height: inherit;
+
     border-radius: 16px;
+}
+
+#banner>h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 100px;
 }
 
 /* ===== General ===== */
 
-.parrafo {
-    width: 90%;
-    background-color: blue;
+section {
+    height: fit-content;
+}
+
+#enemigos {
+    height: 1000px;
+}
+
+#rasgos-enemigos {
+    height: 1000px;
 }
