@@ -111,7 +111,7 @@ values
 ('Kuo-Toa','img/kuotoa.png','Neutral malo','Humanoide','Mediano','Infracomun','Vision en la Oscuridad, Percepcion Pasiva 14','Percepcion +4',0.25,13,18,13,10,11,11,10,8),
 /*LETRA L*/
 ('Liche','img/liche.png','Caótico malo','Muerto viviente','Mediano','Comun, Elfo, Enano, Druidico, Abisal, Celestial','Vision Verdadera, Percepcion Pasiva 19','C.Arcano +18, Historia +12, Perspicacia +9',21,17,135,11,16,16,20,14,16),
-('Licantropo - Hombre rata','img/hombreRata.png','Legal Malo','Humanoide','Mediano','Comun','Vision en la Oscuridad, Percepcion Pasiva 12','Percepcion +2, Sigilo +4',2,12,33,10,15,12,11,10,8),
+('Hombre Rata','img/hombreRata.png','Legal Malo','Humanoide','Mediano','Comun','Vision en la Oscuridad, Percepcion Pasiva 12','Percepcion +2, Sigilo +4',2,12,33,10,15,12,11,10,8),
 ('Lamia','img/lamia.png','Caótico malo','Monstruosidad','Grande','Abisal, Comun','Vision en la Oscuridad, Percepcion Pasiva 12','Engaño +7, Perspicacia +4, Sigilo +3',4,13,97,16,13,15,14,15,16),
 /*LETRA M*/
 ('Mantoscuro','img/mantoscuro.png','Neutral puro','Monstruosidad','Pequeño','','Vision Ciega, Percepcion Pasiva 10','Sigilo +3',0.5,11,22,16,12,13,2,10,5),
@@ -132,13 +132,13 @@ values
 ('Quaggoth','img/quaggoth.png','Caótico neutral','Humanoide','Mediano','Infracomun','Vision en la Oscuridad, Percepcion Pasiva 11','Atletismo +5',2,13,45,17,12,16,6,12,7),
 ('Quimera','img/quimera.png','Caótico malo','Monstruosidad', 'Grande','','Vision en la Oscuridad, Percepcion Pasiva 18','Percepcion +8',6,14,114,19,11,19,3,14,10),
 /*LETRA R*/
-('Rakhasa','img/rakhasa.png','Legal malo','Infernal','Mediano','Comun, Infernal','Vision en la Oscuridad, Percepcion Pasiva 13','Engaño +10, Perspicacia +8',13,16,110,14,17,18,13,16,20),
+('Rakshasa','img/rakhasa.png','Legal malo','Infernal','Mediano','Comun, Infernal','Vision en la Oscuridad, Percepcion Pasiva 13','Engaño +10, Perspicacia +8',13,16,110,14,17,18,13,16,20),
 ('Remorhaz','img/remorhaz.png','Neutral puro','Monstruosidad','Enorme','','Vision en la Oscuridad, Sentir Vibraciones, Percepcion Pasiva 10','',11,17,195,24,13,21,4,10,5),
 ('Roc','img/roc.png','Neutral puro','Monstruosidad','Gargantua','','Percepcion Pasiva 14','Percepcion +4',11,15,248,28,10,20,3,10,9),
 /*LETRA S*/
-('Sucubo','img/sucubo.png','Neutral malo','Infernal','Mediano','Abisal, Comun, Infernal, Telepatia','Vision en la Oscuridad, Percepcion Pasiva 15','Engaño +9, Persuasion +9, Sigilo +7',4,15,66,8,17,13,15,12,20),
-('Saga de la noche','img/saga.png','Neutral malo','Infernal','Mediano','Abisal, Comun, Infernal, Primordial','Vision en la Oscuridad, Percepcion Pasiva 16','Engaño +7, Percepcion +6, Perspicacia +6',5,17,112,18,15,16,16,14,16),
-('Semidragon rojo veterano','img/semidragonRV.png','Neutral puro','Humanoide','Mediano','Comun, Draconido','Vision Ciega, Vision en la Oscuridad, Percepcion Pasiva 12','Atletismo +5, Percepcion +2',5,18,65,16,13,14,10,11,10),
+('Súcubo','img/sucubo.png','Neutral malo','Infernal','Mediano','Abisal, Comun, Infernal, Telepatia','Vision en la Oscuridad, Percepcion Pasiva 15','Engaño +9, Persuasion +9, Sigilo +7',4,15,66,8,17,13,15,12,20),
+('Saga de la Noche','img/saga.png','Neutral malo','Infernal','Mediano','Abisal, Comun, Infernal, Primordial','Vision en la Oscuridad, Percepcion Pasiva 16','Engaño +7, Percepcion +6, Perspicacia +6',5,17,112,18,15,16,16,14,16),
+('Semidragon Rojo Veterano','img/semidragonRV.png','Neutral puro','Humanoide','Mediano','Comun, Draconido','Vision Ciega, Vision en la Oscuridad, Percepcion Pasiva 12','Atletismo +5, Percepcion +2',5,18,65,16,13,14,10,11,10),
 /*LETRA T*/
 ('Thri-kreen','img/thrikreen.png','Caótico neutral','Humanoide','Mediano','Thri-kreen','Vision en la Oscuridad, Percepcion Pasiva 13','Percepcion +3, Sigilo +4, Supervivencia +3',1,15,33,12,15,13,8,12,7),
 ('Tarasca','img/tarasca.png','Neutral puro','Monstruosidad','Gargantua','','Vision Ciega, Percepcion Pasiva 10','',30,25,676,30,11,30,3,11,11),
@@ -259,7 +259,7 @@ insert into rasgos (nombre,descripcion) values
 ('Cambiaformas','Puede elegir cambiar de forma a su antojo, si muere volverá a su forma original'),
 ('Resistencia Legendaria','Puedes elegir tener exito en una tirada de Salvacion que hayas fallado, 3 veces por dia'),
 ('Rejuvenecimiento','Si se posee una Filacterria y es destruida, obtendras un nuevo cuerpo en 1d10 Dias, estando este nuevo cuerpo en plenitud de tus facultades'),
-('Aparencia Falsa','Mientras te mantengas quieto seras indistinguible del fondo'),
+('Apariencia Falsa','Mientras te mantengas quieto seras indistinguible del fondo'),
 ('Explotar al Morir - Polvo','Una nube de polvo aparecera y obligara a las criaturas a 5 pies o menos a pasar una Tirada de Salvacion de Constitucion 10 o quedarán cegados por 1 minuto'),
 ('Apresador','Ventaja en tiradas de ataque contra cualquier criatura que tenga agarrada'),
 ('Adhesivo','Se adhiere a cualquiera que lo toque, si la criatura es Enorme o mas pequeña quedarán apresadas'),
@@ -274,7 +274,7 @@ insert into rasgos (nombre,descripcion) values
 ('Cuerpo Abrasador','Cualquier criatura que entre en contacto contigo recibirá 3d6 de daño de fuego'),
 ('Enlace Telepático','Ignoras las restricciones de la Telepátia cuando la usas para comunicarte con alguien hechizado por ti'),
 ('Caparazón Reflectante','Si eres objetivo de un conjuro cuya area sea una linea o un proyectil mágico tira un d6, de 1 a 5 no te afecta, con 6 ademas devolveras el daño contra su lanzador'),
-('Caparazón Camaleonico','Puedes cambiar el color de tu piel (caparazon) para imitar el entorno y obtienes ventaja en tiradas de Sigilo para esconderte'),
+('Caparazón Camaleónico','Puedes cambiar el color de tu piel (caparazon) para imitar el entorno y obtienes ventaja en tiradas de Sigilo para esconderte'),
 ('Saltar sin Carrera','Puedes saltar longitudinalmente 30 pies o verticalmente 15 pies'),
 ('Cargar','Si te mueves al nenos 20 pies en linea recta hacia un objetivo y despues entra un ataque contra el, el objetivo recibe 2d8 de daño adicional'),
 ('Escape Brumoso','Cuando tu vida llege a 0, en vez de caer te convertiras en una nube de polvo, buscando tu lugar de descanso en menos de 2 horas o moriras'),
@@ -299,6 +299,7 @@ insert into acciones (nombre,descripcion) values
 ('Extraer cerebro',' Ataque cuerpo a cuerpo, +7 al impactar, solo a un objetivo agarrado. 10d10 de daño perforante, si este daño reduce sus puntos de golpe a 0, te alimentaras de su cerebor y morirá'),
 ('Descarga mental','Ataque a distancia en area, cono de 60 pies desde el lanzador. Tirada de Salvación de inteligencia 15 o 4d8+4 de daño psíquico y aturdido durante 1 minuto'),
 ('Mordisco 2','Ataque cuerpo a cuerpo, +10 a impactar, 3d10+6 de daño perforante'),
+('Mordisco 3','Ataque cuerpo a cuerpo, +10 a impactar, 6d10+7 de daño perforante'),
 ('Constreñir','Ataque cuerpo a cuerpo, +10 a impactar, criatura Grande o menor. 2d10+6 de daño contundente y 2d10+6 cortante. Tirada de Salvacion de fuerza 16 para escapar del agarre'),
 ('Aliento de Relámpago','Ataque a distancia en area, linea de 20x5 pies. Tirada de Salvación de Destreza 16 o 12d10 de daño de relámpago, mitad si superan la Tirada de Salvación '),
 ('Engullir',' Ataque cuerpo a cuerpo, +10 a impactar, sobre criatura mediana o menor. Al impactar engullira al objetivo, desde dentro tendra que hacer más de 30 puntos de daño en un turno para poder salir, o recibirá 6d6 de daño de ácido por turno'),

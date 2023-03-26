@@ -422,3 +422,430 @@ insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
 ('Mordisco 1','Kuo-Toa'),
 ('Lanza','Kuo-Toa'),
 ('Red','Kuo-Toa');
+
+/*Lamia*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Lanzamiento de Conjuros Innato','Lamia');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Lamia'),
+('Garras','Lamia'),
+('Daga','Lamia'),
+('Toque Embriagador','Lamia');
+
+/*Hombre Rata*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Contundente','Hombre Rata'),
+('Inmunidad a Cortante','Hombre Rata'),
+('Inmunidad a Perforante','Hombre Rata'),
+('Cambiaformas','Hombre Rata'),
+('Olfato Agudo','Hombre Rata');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Hombre Rata'),
+('Mordisco 1','Hombre Rata'),
+('Espada Corta','Hombre Rata'),
+('Ballesta de Mano','Hombre Rata');
+
+/*Liche*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Resistencia a Frío','Liche'),
+('Resistencia a Necrótico','Liche'),
+('Resistencia a Relámpago','Liche'),
+('Inmunidad a Cortante','Liche'),
+('Inmunidad a Perforante','Liche'),
+('Inmunidad a Asustado','Liche'),
+('Inmunidad a Cansancio','Liche'),
+('Inmunidad a Envenenado','Liche'),
+('Inmunidad a Hechizado','Liche'),
+('Inmunidad a Paralizado','Liche'),
+('Resistencia Legendaria','Liche'),
+('Rejuvenecimiento','Liche'),
+('Lanzamiento de Conjuros Innato','Liche'),
+('Inmunidad a Expulsion','Liche');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Toque Paralizante','Liche'),
+('Lanzar un Truco','Liche'),
+('Mirada Aterradora','Liche'),
+('Perturbar Vida','Liche');
+
+/*Mantoscuro*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Ecolocalización','Mantoscuro'),
+('Apariencia Falsa','Mantoscuro');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Aplastar','Mantoscuro'),
+('Aura de Oscuridad','Mantoscuro');
+
+/*Mephit de polvo*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Vulnerabilidad a Fuego','Mephit de polvo'),
+('Inmunidad a Veneno','Mephit de polvo'),
+('Inmunidad a Envenenado','Mephit de polvo'),
+('Explotar al Morir - Polvo','Mephit de polvo'),
+('Lanzamiento de Conjuros Innato','Mephit de polvo');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Garras','Mephit de polvo'),
+('Aliento Cegador','Mephit de polvo');
+
+/*Mimico*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Ácido','Mimico'),
+('Inmunidad a Derribado','Mimico'),
+('Cambiaformas','Mimico'),
+('Adhesivo','Mimico'),
+('Apariencia Falsa','Mimico'),
+('Apresador','Mimico');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Pseudópodo','Mimico'),
+('Mordisco 1','Mimico');
+
+/*Naga Guardiana*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Veneno','Naga Guardiana'),
+('Inmunidad a Envenenado','Naga Guardiana'),
+('Inmunidad a Hechizado','Naga Guardiana'),
+('Rejuvenecimiento','Naga Guardiana'),
+('Lanzamiento de Conjuros Innato','Naga Guardiana');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Mordisco 1','Naga Guardiana'),
+('Escupir Veneno','Naga Guardiana');
+
+/*Nótico*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Vista Aguda','Nótico');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Nótico'),
+('Mirada Putrescente','Nótico'),
+('Intuición Sobrecogedora','Nótico'),
+('Garra 1','Nótico');
+
+/*Oso Lechuza*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Vista Aguda','Oso Lechuza'),
+('Olfato Agudo','Oso Lechuza');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Oso Lechuza'),
+('Garra 2','Oso Lechuza'),
+('Pico 1','Oso Lechuza');
+
+/*Osgo*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Bruto','Osgo'),
+('Ataque por Sorpresa','Osgo');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Lucero del Alba','Osgo'),
+('Jabalina','Osgo');
+
+/*Oni*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Lanzamiento de Conjuros Innato','Oni'),
+('Armas Mágicas','Oni'),
+('Regeneración','Oni');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Oni'),
+('Garra 1','Oni'),
+('Guja','Oni'),
+('Cambiar de Forma','Oni');
+
+/*Pixie*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Lanzamiento de Conjuros Innato','Pixie'),
+('Resistencia Mágica','Pixie');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Invisibilidad Superior','Pixie');
+
+/*Pesadilla*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Otorgar Resistencia al Fuego','Pesadilla'),
+('Iluminación Variable','Pesadilla');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Cascos','Pesadilla'),
+('Trote Etéreo','Pesadilla');
+
+/*Perforador*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Apariencia Falsa','Perforador'),
+('Trepar cual Arácnido','Perforador');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Caer','Perforador');
+
+/*Quaggoth*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Veneno','Quaggoth'),
+('Inmunidad a Envenenado','Quaggoth'),
+('Furia','Quaggoth');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Quaggoth'),
+('Garra 1','Quaggoth');
+
+/*Quimera*/
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 2','Quimera'),
+('Mordisco 2','Quimera'),
+('Cuernos 1','Quimera'),
+('Garra 2','Quimera'),
+('Aliento de Fuego','Quimera');
+
+/*Rakshasa*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Perforante','Rakshasa'),
+('Inmunidad a Contundente','Rakshasa'),
+('Inmunidad a Cortante','Rakshasa'),
+('Inmunidad Mágica Limitada','Rakshasa'),
+('Lanzamiento de Conjuros Innato','Rakshasa');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Rakshasa'),
+('Garra 1','Rakshasa');
+
+/*Remorhaz*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Cuerpo Abrasador','Remorhaz');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Mordisco 3','Remorhaz'),
+('Engullir','Remorhaz');
+
+/*Roc*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Vista Aguda','Roc');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Roc'),
+('Pico 2','Roc'),
+('Garras','Roc');
+
+/*Súcubo*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Resistencia a Frío','Súcubo'),
+('Resistencia a Fuego','Súcubo'),
+('Resistencia a Relámpago','Súcubo'),
+('Resistencia a Veneno','Súcubo'),
+('Resistencia a Contundente','Súcubo'),
+('Resistencia a Cortante','Súcubo'),
+('Resistencia a Perforante','Súcubo'),
+('Enlace Telepático','Súcubo'),
+('Cambiaformas','Súcubo');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Garra 1','Súcubo'),
+('Hechizar','Súcubo'),
+('Beso Debilitador','Súcubo'),
+('Etérea','Súcubo');
+
+/*Semidragon Rojo Veterano*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Resistencia a Fuego','Semidragon Rojo Veterano');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Semidragon Rojo Veterano'),
+('Espada Larga','Semidragon Rojo Veterano'),
+('Espada Corta','Semidragon Rojo Veterano'),
+('Ballesta Pesada','Semidragon Rojo Veterano'),
+('Aliento de Fuego','Semidragon Rojo Veterano');
+
+/*Saga de la Noche*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Resistencia a Frío','Saga de la Noche'),
+('Resistencia a Fuego','Saga de la Noche'),
+('Resistencia a Contundente','Saga de la Noche'),
+('Resistencia a Cortante','Saga de la Noche'),
+('Resistencia a Perforante','Saga de la Noche'),
+('Inmunidad a Hechizado','Saga de la Noche'),
+('Lanzamiento de Conjuros Innato','Saga de la Noche'),
+('Resistencia Mágica','Saga de la Noche');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Garra 2','Saga de la Noche'),
+('Cambiar de Forma','Saga de la Noche'),
+('Etérea','Saga de la Noche'),
+('Provocar Pesadilla','Saga de la Noche');
+
+/*Tarasca*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Veneno','Tarasca'),
+('Inmunidad a Fuego','Tarasca'),
+('Inmunidad a Contundente','Tarasca'),
+('Inmunidad a Cortante','Tarasca'),
+('Inmunidad a Perforante','Tarasca'),
+('Inmunidad a Asustado','Tarasca'),
+('Inmunidad a Envenenado','Tarasca'),
+('Inmunidad a Hechizado','Tarasca'),
+('Inmunidad a Paralizado','Tarasca'),
+('Resistencia Legendaria','Tarasca'),
+('Resistencia Mágica','Tarasca'),
+('Monstruo de Asedio','Tarasca'),
+('Caparazón Reflectante','Tarasca');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Tarasca'),
+('Ataque Múltiple 2','Tarasca'),
+('Mordisco 2','Tarasca'),
+('Garra 2','Tarasca'),
+('Cuernos 2','Tarasca'),
+('Cola 1','Tarasca'),
+('Presencia Aterradora','Tarasca'),
+('Engullir','Tarasca');
+
+/*Thri-kreen*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Caparazón Camaleónico','Thri-kreen'),
+('Saltar sin Carrera','Thri-kreen');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Thri-kreen'),
+('Mordisco 1','Thri-kreen'),
+('Garra 1','Thri-kreen');
+
+/*Troglodita*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Caparazón Camaleónico','Troglodita'),
+('Hedor','Troglodita'),
+('Sensibilidad a la Luz Solar','Troglodita');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 2','Troglodita'),
+('Mordisco 1','Troglodita'),
+('Garra 1','Troglodita');
+
+/*Unicornio*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Veneno','Unicornio'),
+('Inmunidad a Envenenado','Unicornio'),
+('Inmunidad a Hechizado','Unicornio'),
+('Inmunidad a Paralizado','Unicornio'),
+('Cargar','Unicornio'),
+('Lanzamiento de Conjuros Innato','Unicornio'),
+('Resistencia Mágica','Unicornio'),
+('Armas Mágicas','Unicornio');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Unicornio'),
+('Cascos','Unicornio'),
+('Cuerno','Unicornio'),
+('Toque Sanador','Unicornio'),
+('Teletransporte','Unicornio'),
+('Escudo Resplandeciente','Unicornio');
+
+/*Vampiro*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Resistencia a Necrótico','Vampiro'),
+('Resistencia a Contundente','Vampiro'),
+('Resistencia a Cortante','Vampiro'),
+('Resistencia a Perforante','Vampiro'),
+('Cambiaformas','Vampiro'),
+('Resistencia Legendaria','Vampiro'),
+('Escape Brumoso','Vampiro'),
+('Regeneración','Vampiro'),
+('Prohibición Vampírica','Vampiro'),
+('Dañado por el Agua Corriente','Vampiro'),
+('Estaca en el Corazón','Vampiro'),
+('Hipersensibilidad a la Luz Solar','Vampiro'),
+('Trepar cual Arácnido','Vampiro');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Vampiro'),
+('Ataque sin Armas','Vampiro'),
+('Mordisco 1','Vampiro'),
+('Hechizar','Vampiro'),
+('Hijos de la Noche','Vampiro');
+
+/*Engendro Vampírico*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Resistencia a Necrótico','Engendro Vampírico'),
+('Resistencia a Contundente','Engendro Vampírico'),
+('Resistencia a Cortante','Engendro Vampírico'),
+('Resistencia a Perforante','Engendro Vampírico'),
+('Regeneración','Engendro Vampírico'),
+('Prohibición Vampírica','Engendro Vampírico'),
+('Dañado por el Agua Corriente','Engendro Vampírico'),
+('Estaca en el Corazón','Engendro Vampírico'),
+('Hipersensibilidad a la Luz Solar','Engendro Vampírico'),
+('Trepar cual Arácnido','Engendro Vampírico');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Engendro Vampírico'),
+('Garra 1','Engendro Vampírico'),
+('Mordisco 1','Engendro Vampírico');
+
+/*Xorn*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Resistencia a Contundente','Xorn'),
+('Resistencia a Cortante','Xorn'),
+('Resistencia a Perforante','Xorn'),
+('Deslizarse por la Tierra','Xorn'),
+('Camuflaje con la Piedra','Xorn');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 2','Xorn'),
+('Garra 1','Xorn'),
+('Mordisco 1','Xorn');
+
+/*Yeti abominable*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Frío','Yeti abominable'),
+('Miedo al Fuego','Yeti abominable'),
+('Olfato Agudo','Yeti abominable'),
+('Camuflarse en la Nieve','Yeti abominable');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Yeti abominable'),
+('Garra 1','Yeti abominable'),
+('Mirada Escalofriante','Yeti abominable'),
+('Aliento Gélido','Yeti abominable');
+
+/*Yuan-ti Purasangre*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Veneno','Yuan-ti Purasangre'),
+('Inmunidad a Envenenado','Yuan-ti Purasangre'),
+('Lanzamiento de Conjuros Innato','Yuan-ti Purasangre'),
+('Resistencia Mágica','Yuan-ti Purasangre');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Yuan-ti Purasangre'),
+('Cimitarra','Yuan-ti Purasangre'),
+('Arco Corto','Yuan-ti Purasangre');
+
+/*Mezzoloth*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Resistencia a Frío','Mezzoloth'),
+('Resistencia a Fuego','Mezzoloth'),
+('Resistencia a Relámpago','Mezzoloth'),
+('Resistencia a Cortante','Mezzoloth'),
+('Resistencia a Contundente','Mezzoloth'),
+('Resistencia a Perforante','Mezzoloth'),
+('Inmunidad a Ácido','Mezzoloth'),
+('Inmunidad a Veneno','Mezzoloth'),
+('Inmunidad a Envenenado','Mezzoloth'),
+('Lanzamiento de Conjuros Innato','Mezzoloth'),
+('Resistencia Mágica','Mezzoloth'),
+('Armas Mágicas','Mezzoloth');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Mezzoloth'),
+('Garra 1','Mezzoloth'),
+('Tridente','Mezzoloth'),
+('Mini-Teletransporte','Mezzoloth');
+
+/*Zombi*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Inmunidad a Veneno','Zombi'),
+('Inmunidad a Envenenado','Zombi'),
+('Fortaleza de Muerto Viviente','Zombi');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Golpe 1','Zombi');
