@@ -1,7 +1,7 @@
-drop schema if exists Criaturas;
+drop schema if exists criaturas;
 
-create schema Criaturas;
-use Criaturas;
+create schema criaturas;
+use criaturas;
 
 drop table if exists enemigos;
 drop table if exists rasgos;
