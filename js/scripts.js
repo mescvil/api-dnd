@@ -4,13 +4,12 @@ window.addEventListener("scroll", () => {
 	let actual = "";
 
 	secciones.forEach((seccion) => {
-		const seccionTop = seccion.offsetTop - seccion.clientHeight / 4;
+		const seccionTop = seccion.offsetTop - seccion.clientHeight / 2.5;
 		const seccionAltura = seccion.clientHeight;
 		const seccionBottom = seccionTop + seccionAltura;
 
 		if (scrollY > seccionTop && scrollY <= seccionBottom) {
 			actual = seccion.getAttribute("id");
-			console.log(actual);
 		}
 	});
 

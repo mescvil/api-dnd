@@ -2,8 +2,10 @@
     --fondo-negro: #1e2533;
     --fondo-azul: #12181cff;
     --fondo-azul-hover: rgb(25, 33, 38);
+    --fondo-tarjeta: rgba(18, 24, 28, 0.371);
     --fondo-rojo: #940b0c;
     --texto-gris: #cdcecf;
+
 
     --color-inicio: #ff000040;
     --color-enemigo: #005c1968;
@@ -20,4 +22,9 @@
 @font-face {
     font-family: NotoSans;
     src: url(../fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Kelm;
+    src: url(../fonts/Kelm.otf);
 }
