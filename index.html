@@ -46,7 +46,10 @@
                     <li class="lista lista-clase rasgos-clases">Rasgos clases</li>
                 </a>
                 <a href="#especialidades">
-                    <li class="lista lista-clase especialidades">Especialidad clases</li>
+                    <li class="lista lista-clase especialidades">Especialidad</li>
+                </a>
+                <a href="#habilidades">
+                    <li class="lista lista-clase habilidades">Habilidades especialidad</li>
                 </a>
                 <a href="#armas">
                     <li class="lista lista-equipo armas">Armas</li>
@@ -70,57 +73,1105 @@
         </nav>
     </aside>
     <div id="main">
+
         <section id="inicio">
             <div id="banner">
                 <img src="img/banner.png" alt="">
                 <h1>API D&D</h1>
             </div>
         </section>
-        <section id="enemigos">
-            <h1>
-                Enemigos
-            </h1>
+
+        <section id="enemigos" class="seccion">
+
+            <h1>Enemigos</h1>
+            <div class="separador color-enemigo"></div>
+
+            <h2>Enemigos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos"><code>http://rrr2dam.com/api/enemigos</code></a></p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Enemigo",
+        "elementos": 61,
+        "resultado": [
+            {
+                "nombre": "Anjanath",
+                "imagen": "img/anjanath.png",
+                "alineamiento": "Neutral_puro",
+                "tipo": "Bestia",
+                "tamanio": "Enorme",
+                "idiomas": "",
+                "sentidos": "Percepcion Pasiva 14",     
+                "habilidades": "Percepcion +4",
+                "rasgoCriaturas": [
+                        .
+                        .
+                        .
+                ],
+                "acciones": [
+                        .
+                        .
+                        .
+                ],
+                "desafio": 8.0,
+                "claseArmadura": 13,
+                "puntosGolpe": 136,
+                "fuerza": 25,
+                "destreza": 10,
+                "constitucion": 19,
+                "inteligencia": 2,
+                "sabiduria": 12,
+                "carisma": 9
+            },
+                    .
+                    .
+                    .
+    
+            ]
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/anjanath"><code>http://rrr2dam.com/api/enemigos/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Anjanath",
+        "imagen": "img/anjanath.png",
+        "alineamiento": "Neutral_puro",
+        "tipo": "Bestia",
+        "tamanio": "Enorme",
+        "idiomas": "",
+        "sentidos": "Percepcion Pasiva 14",     
+        "habilidades": "Percepcion +4",
+        "rasgoCriaturas": [
+                .
+                .
+                .
+        ],
+        "acciones": [
+                .
+                .
+                .
+        ],
+        "desafio": 8.0,
+        "claseArmadura": 13,
+        "puntosGolpe": 136,
+        "fuerza": 25,
+        "destreza": 10,
+        "constitucion": 19,
+        "inteligencia": 2,
+        "sabiduria": 12,
+        "carisma": 9
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Enemigo <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>imagen</td>
+                        <td>Url de la imagen</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>alineamiento</td>
+                        <td>Alineamiento moral del enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>tipo</td>
+                        <td>Familia del enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>tamanio</td>
+                        <td>Tamaño del enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>idiomas</td>
+                        <td>Idiomas que conoce o habla el enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>sentidos</td>
+                        <td>Forma en la que percibe el mundo el enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>habilidades</td>
+                        <td>Habilidades que posee el enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>rasgoEnemigos</td>
+                        <td>Rasgos del enemigo</td>
+                        <td>Lista de <a href="#rasgos-enemigos">Rasgos</a></td>
+                    </tr>
+                    <tr>
+                        <td>acciones</td>
+                        <td>Acciones que ejecuta el enemigo</td>
+                        <td>Lista de <a href="#acciones-enemigas">Acciones</a></td>
+                    </tr>
+                    <tr>
+                        <td>desafio</td>
+                        <td>Nivel de dificultad del enemigo</td>
+                        <td>Float</td>
+                    </tr>
+                    <tr>
+                        <td>claseArmadura</td>
+                        <td>Umbral de armadura de enemigo</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>puntosGolpe</td>
+                        <td>Vida total de enemigo</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>fuerza</td>
+                        <td>Caracteristica de fuerza</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>destreza</td>
+                        <td>Caracteristica de destreza</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>constitucion</td>
+                        <td>Caracteristica de constitución</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>inteligencia</td>
+                        <td>Caracteristica de inteligencia</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>sabiduria</td>
+                        <td>Caracteristica de sabiduría</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>carisma</td>
+                        <td>Caracteristica de carisma</td>
+                        <td>Integer</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="rasgos-enemigos">
-            <h1>
-                Rasgos enemigos
-            </h1>
+
+        <section id="rasgos-enemigos" class="seccion">
+
+            <h1>Rasgos Enemigos</h1>
+            <div class="separador color-enemigo"></div>
+
+            <h2>Enemigos / Rasgos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/rasgos"><code>http://rrr2dam.com/api/enemigos/rasgos</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "RasgoCriatura",
+        "elementos": 127,
+        "resultado": [
+            {
+                "nombre": "Absorción de Ácido",
+                "descripcion": "No recibe daño de este tipo, en su lugar recupera vida"
+            },
+                    .
+                    .
+                    .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/rasgos/absorción de ácido"><code>http://rrr2dam.com/api/enemigos/rasgos/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Absorción de Ácido",
+        "descripcion": "No recibe daño de este tipo, en su lugar recupera vida"
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Rasgo Enemigo <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="acciones-enemigas">
-            <h1>
-                Acciones enemigas
-            </h1>
+
+        <section id="acciones-enemigas" class="seccion">
+
+            <h1>Acciones Enemigas</h1>
+            <div class="separador color-enemigo"></div>
+
+            <h2>Enemigos / Acciones <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/acciones"><code>http://rrr2dam.com/api/enemigos/acciones</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Accion",
+        "elementos": 104,
+        "resultado": [
+            {
+                "nombre": "Invisibilidad Superior",
+                "descripcion": "Te vuelves invisible tu y tu equipo hasta realizar 
+                                otra accion que no sea de movimiento o pierdas la 
+                                concentración"
+            },
+                    .
+                    .
+                    .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/acciones/Invisibilidad Superior"><code>http://rrr2dam.com/api/enemigos/acciones/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Invisibilidad Superior",
+        "descripcion": "Te vuelves invisible tu y tu equipo hasta realizar 
+                        otra accion que no sea de movimiento o pierdas la 
+                        concentración"
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Acción Enemiga <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la acción</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción de la acción</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="razas">
-            <h1>
-                Razas
-            </h1>
+
+        <section id="razas" class="seccion">
+
+            <h1>Razas</h1>
+            <div class="separador color-razas"></div>
+
+            <h2>Razas <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
+                    href="http://rrr2dam.com/api/razas"><code>http://rrr2dam.com/api/razas</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Raza",
+        "elementos": 9,
+        "resultado": [
+            {
+                "nombre": "Dracónidos",
+                "edadMaxima": 80,
+                "alturaMinima": 6.0,
+                "alturaMaxima": 8.0,
+                "velocidad": 30,
+                "rasgosRaza": [
+                    .
+                    .
+                    .
+                ]
+            },
+                    .
+                    .
+                    .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
+                    href="http://rrr2dam.com/api/razas/Dracónidos"><code>http://rrr2dam.com/api/razas/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Dracónidos",
+        "edadMaxima": 80,
+        "alturaMinima": 6.0,
+        "alturaMaxima": 8.0,
+        "velocidad": 30,
+        "rasgosRaza": [
+            .
+            .
+            .
+        ]
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Raza <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la raza</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>edadMaxima</td>
+                        <td>Esperanza de vida de la raza</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>alturaMinima</td>
+                        <td>Altura mínima esperable de la raza</td>
+                        <td>Float</td>
+                    </tr>
+                    <tr>
+                        <td>alturaMaxima</td>
+                        <td>Altura máxima esperable de la raza</td>
+                        <td>Float</td>
+                    </tr>
+                    <tr>
+                        <td>velocidad</td>
+                        <td>Capacidad de movimiento de la raza</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>rasgoRaza</td>
+                        <td>Rasgos de la raza</td>
+                        <td>Lista de <a href="#rasgos-raza">Rasgos</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="rasgos-razas">
-            <h1>
-                Ragos razas
-            </h1>
+
+        <section id="rasgos-razas" class="seccion">
+
+            <h1>Rasgos Razas</h1>
+            <div class="separador color-razas"></div>
+
+            <h2>Razas / Rasgos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
+                    href="http://rrr2dam.com/api/razas/rasgos"><code>http://rrr2dam.com/api/razas/rasgos</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "RasgoRaza",
+        "elementos": 89,
+        "resultado": [
+            {
+                "nombre": "Linaje Draconido Azul",
+                "descripcion": "Daño de Aliento tipo Relámpàgo en un cono de 5 por 
+                                30 pies (Salvación DES)"
+            },
+                    .
+                    .
+                    .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
+                    href="http://rrr2dam.com/api/razas/rasgos/Linaje Draconido Azul"><code>http://rrr2dam.com/api/razas/rasgos/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Linaje Draconido Azul",
+        "descripcion": "Daño de Aliento tipo Relámpàgo en un cono de 5 por 
+                        30 pies (Salvación DES)"
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Ragos Raza <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="clases">
-            <h1>
-                Clases
-            </h1>
+
+        <section id="clases" class="seccion">
+
+            <h1>Clases</h1>
+            <div class="separador color-clases"></div>
+
+            <h2>Clases <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases"><code>http://rrr2dam.com/api/clases</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Clase",
+        "elementos": 12,
+        "resultado": [
+            {
+                "nombre": "Bárbaro",
+                "dadosGolpe": "1d12",
+                "descripcion": "Los bárbaros se definen por su furia: una ira 
+                                desenfrenada, insaciable e irreflexiva. Para algunos 
+                                bárbaros, su furia ...",
+                "caracteristicaPrincipal": "Fuerza y Constitución",
+                "tiradasSalvacion": "Fuerza y Constitución",
+                "rasgosClase": [
+                    .
+                    .
+                    .
+                ],
+                "armas": [
+                    .
+                    .
+                    .
+                ],
+                "armaduras": [
+                    .
+                    .
+                    .
+                ],
+                "hechizos": [
+                    .
+                    .
+                    .
+                ],
+                "especialidades": [
+                    .
+                    .
+                    .
+                ],
+                "competencias": [
+                    .
+                    .
+                    .
+                ]
+            },
+                    .
+                    .
+                    .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/Bárbaro"><code>http://rrr2dam.com/api/clases/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Bárbaro",
+        "dadosGolpe": "1d12",
+        "descripcion": "Los bárbaros se definen por su furia: una ira 
+                        desenfrenada, insaciable e irreflexiva. Para algunos 
+                        bárbaros, su furia ...",
+        "caracteristicaPrincipal": "Fuerza y Constitución",
+        "tiradasSalvacion": "Fuerza y Constitución",
+        "rasgosClase": [
+            .
+            .
+            .
+        ],
+        "armas": [
+            .
+            .
+            .
+        ],
+        "armaduras": [
+            .
+            .
+            .
+        ],
+        "hechizos": [
+            .
+            .
+            .
+        ],
+        "especialidades": [
+            .
+            .
+            .
+        ],
+        "competencias": [
+            .
+            .
+            .
+        ]
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Clase <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la clase</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>dadosGolpe</td>
+                        <td>Aumento de la vida por nivel</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>caracteristicaPrincipal</td>
+                        <td>Caracteristica por la cual se rige la clase</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>tiradasSalvacion</td>
+                        <td>Tiradas de salvación en las cuales se tiene ventaja</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>rasgosClase</td>
+                        <td>Rasgos de la clase</td>
+                        <td>Lista de <a href="#rasgos-clases">Rasgos</a></td>
+                    </tr>
+                    <tr>
+                        <td>armas</td>
+                        <td>Armas usables por la clase</td>
+                        <td>Lista de <a href="#armas">Armas</a></td>
+                    </tr>
+                    <tr>
+                        <td>armaduras</td>
+                        <td>Armaduras usables por la clase</td>
+                        <td>Lista de <a href="#armaduras">Armaduras</a></td>
+                    </tr>
+                    <tr>
+                        <td>hechizos</td>
+                        <td>Hechizos usables por la clase</td>
+                        <td>Lista de <a href="#magic">Hechizos</a></td>
+                    </tr>
+                    <tr>
+                        <td>especialidades</td>
+                        <td>Especialidades de la clase</td>
+                        <td>Lista de <a href="#especialidades">Especialidades</a></td>
+                    </tr>
+                    <tr>
+                        <td>competencias</td>
+                        <td>Competencias de la clase</td>
+                        <td>Lista de <a href="#competencias">Competencias</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="rasgos-clases">
-            <h1>
-                Ragos clases
-            </h1>
+
+        <section id="rasgos-clases" class="seccion">
+
+            <h1>Rasgos Clases</h1>
+            <div class="separador color-clases"></div>
+
+            <h2>Clases / Rasgos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/rasgos"><code>http://rrr2dam.com/api/clases/rasgos</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "RasgoClase",
+        "elementos": 144,
+        "resultado": [
+            {
+                "nombre": "Ataque Temerario",
+                "descripcion": "A partir del nivel 2, puedes dejar a un lado 
+                                toda preocupación por defenderte para atacar 
+                                con una desesperación feroz..."
+            },
+                .
+                .
+                .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/rasgos/Ataque Temerario"><code>http://rrr2dam.com/api/clases/rasgos/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Ataque Temerario",
+        "descripcion": "A partir del nivel 2, puedes dejar a un lado 
+                        toda preocupación por defenderte para atacar 
+                        con una desesperación feroz..."
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Rasgo Clase <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="especialidades">
-            <h1>
-                Especialidades
-            </h1>
+
+        <section id="especialidades" class="seccion">
+
+            <h1>Especialidad Clases</h1>
+            <div class="separador color-clases"></div>
+
+            <h2>Clases / Especialidades <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/especialidades"><code>http://rrr2dam.com/api/clases/especialidades</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Especialidad",
+        "elementos": 34,
+        "resultado": [
+            {
+                "nombre": "Senda del Guerrero Totémico",
+                "descripcion": "La Senda del Guerrero Totémico es un viaje 
+                                espiritual, en el que el bárbaro acepta 
+                                un espíritu animal como guía...",
+                "habilidades": [
+                    .
+                    .
+                    .
+                ]
+            },
+                .
+                .
+                .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/especialidades/Senda del Guerrero Totémico"><code>http://rrr2dam.com/api/clases/especialidades/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Senda del Guerrero Totémico",
+        "descripcion": "La Senda del Guerrero Totémico es un viaje 
+                        espiritual, en el que el bárbaro acepta 
+                        un espíritu animal como guía...",
+        "habilidades": [
+            .
+            .
+            .
+        ]
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Especialidad Clase <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la especialidad</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción de la especialidad</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>habilidades</td>
+                        <td>Habilidades que posee la especialidad</td>
+                        <td>Lista con las <a href="#habilidades">Habilidades</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="armas">
-            <h1>
-                Armas
-            </h1>
+
+        <section id="habilidades" class="seccion">
+
+            <h1>Habilidades Especialidad</h1>
+            <div class="separador color-clases"></div>
+
+            <h2>Clases / Especialidades / Habilidades <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/especialidades/habilidades"><code>http://rrr2dam.com/api/clases/especialidades/habilidades</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "HabilidadEspecialidad",
+        "elementos": 136,
+        "resultado": [
+            {
+                "nombre": "Buscador de Espiritus",
+                "descripcion": "La tuya es una senda que busca la vinculación con el 
+                                mundo natural, otorgándote parentesco con bestias. 
+                                Cuando adoptas esta senda al nivel 3, ganas..."
+            },
+                .
+                .
+                .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/especialidades/habilidades/Buscador de Espiritus"><code>http://rrr2dam.com/api/clases/especialidades/habilidades/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Buscador de Espiritus",
+        "descripcion": "La tuya es una senda que busca la vinculación con el 
+                        mundo natural, otorgándote parentesco con bestias. 
+                        Cuando adoptas esta senda al nivel 3, ganas..."
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Habilidades Especialidad <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la habilidad</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción de la habilidad</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
+
+        <section id="armas" class="seccion">
+
+            <h1>Armas</h1>
+            <div class="separador color-equipo"></div>
+
+            <h2>Equipamiento / Armas <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
+                    href="http://rrr2dam.com/api/clases/especialidades/habilidades"><code>http://rrr2dam.com/api/clases/especialidades/habilidades</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Arma",
+        "elementos": 37,
+        "resultado": [
+            {
+                "nombre": "Hacha a Dos Manos",
+                "danio": "1d12 cortante",
+                "dosManos": true,
+                "arrojadiza": false,
+                "propiedad": "Marcial, Pesada",
+                "precio": "30 piezas de oro"
+            },
+                .
+                .
+                .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/armas/Hacha a Dos Manos"><code>http://rrr2dam.com/api/equipamiento/armas/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Hacha a Dos Manos",
+        "danio": "1d12 cortante",
+        "dosManos": true,
+        "arrojadiza": false,
+        "propiedad": "Marcial, Pesada",
+        "precio": "30 piezas de oro"
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Armas <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del arma</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>danio</td>
+                        <td>Dados y tipo de daño del arma</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>dosManos</td>
+                        <td>Obligación de usarse a dos manos</td>
+                        <td>Boolean</td>
+                    </tr>
+                    <tr>
+                        <td>arrojadiza</td>
+                        <td>Posibilidad de lanzar el arma como un proyectil</td>
+                        <td>Boolean</td>
+                    </tr>
+                    <tr>
+                        <td>propiedad</td>
+                        <td>Descripción de las cualidades del arma</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>precio</td>
+                        <td>Precio del arma en tiendas</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
         <section id="armaduras">
             <h1>
                 Armaduras

@@ -2,9 +2,11 @@
     --fondo-negro: #1e2533;
     --fondo-azul: #12181cff;
     --fondo-azul-hover: rgb(25, 33, 38);
-    --fondo-tarjeta: rgba(18, 24, 28, 0.371);
+    --fondo-tarjeta: #181e29;
+    --fondo-json: #27303b;
     --fondo-rojo: #940b0c;
     --texto-gris: #cdcecf;
+    --texto-gris-menos: #797979;
 
 
     --color-inicio: #ff000040;
@@ -17,6 +19,22 @@
     --color-comp: linear-gradient(-45deg,
             rgba(255, 106, 0, 0.422) 50%,
             rgba(112, 3, 52, 0.68) 50%);
+}
+
+.color-enemigo {
+    background-color: var(--color-enemigo);
+}
+
+.color-razas {
+    background-color: var(--color-raza);
+}
+
+.color-clases {
+    background-color: var(--color-clase);
+}
+
+.color-equipo {
+    background-color: var(--color-equipo);
 }
 
 @font-face {

@@ -67,14 +67,84 @@ body {
     font-size: 100px;
 }
 
-/* ===== General ===== */
+/* ===== Secciones ===== */
 
-section {
-    height: 500px;
-    background-color: var(--fondo-azul);
-    margin: 10px;
+.seccion {
+    margin: 12px;
+    margin-bottom: 36px;
+    padding: 16px;
+    border-radius: 8px;
+
+    background-color: var(--fondo-tarjeta);
 }
+
+.seccion>h1 {
+    font-size: 35px;
+}
+
+.seccion>h2 {
+    font-size: 22px;
+}
+
+.texto-gris {
+    color: var(--texto-gris-menos);
+    font-size: 18px;
+}
+
+.seccion>.separador {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 6px;
+    border-radius: 4px;
+}
+
+.seccion>.p-peticion {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.tipo-peticion {
+    padding: 8px;
+    margin-right: 12px;
+    border-radius: 8px;
+    font-weight: 900;
+}
+
+.p-peticion>a {
+    color: var(--texto-gris);
+    font-size: 18px;
+}
+
+/* ===== Contendor JSON ===== */
+
+.contenedor-json {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 50%;
+
+    font-size: large;
+    background-color: var(--fondo-json);
+    border-radius: 4px;
+}
+
+/* ===== Tabla Entidad ===== */
+
+.seccion>table {
+    width: 50%;
+    margin: 12px;
+
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+td>a {
+    color: var(--fondo-rojo);
+}
+
 
 #inicio {
     height: fit-content;
+    margin: 10px;
 }
