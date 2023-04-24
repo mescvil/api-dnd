@@ -4,19 +4,20 @@ window.addEventListener("scroll", () => {
 	let actual = "";
 
 	secciones.forEach((seccion) => {
-		const seccionTop = seccion.offsetTop - seccion.clientHeight / 2.5;
-		const seccionAltura = seccion.clientHeight;
-		const seccionBottom = seccionTop + seccionAltura;
+		const seccionTop = seccion.offsetTop - seccion.offsetHeight / 3;
 
-		if (scrollY > seccionTop && scrollY <= seccionBottom) {
+		if (scrollY >= 0 && scrollY <= 400) {
+			actual = "inicio";
+		} else if (scrollY >= seccionTop) {
 			actual = seccion.getAttribute("id");
 		}
 	});
 
-	navLi.forEach((enlace) => {
-		enlace.classList.remove("activa");
-		if (enlace.classList.contains(actual)) {
-			enlace.classList.add("activa");
+	navLi.forEach((li) => {
+		li.classList.remove("activa");
+
+		if (li.classList.contains(actual)) {
+			li.classList.add("activa");
 		}
 	});
 });
