@@ -22,7 +22,7 @@
         <nav>
             <ul>
                 <a href="#inicio">
-                    <li class="lista lista-inicio inicio activa">Inicio</li>
+                    <li class="lista lista-inicio inicio activa">Información</li>
                 </a>
                 <a href="#enemigos">
                     <li class="lista lista-enemigo enemigos">Enemigos</li>
@@ -83,6 +83,30 @@
                 <h1>API D&D</h1>
             </div>
         </section>
+
+        <div class="seccion">
+            <p><span class="texto-negrita">Consejo rápido:</span> Usa la función "buscar en la página" de tu navegador
+                para encontrar un
+                recurso específico
+                más rápido (<kbd>Ctrl+F</kbd>)</p>
+            <h2>Información</h2>
+            <div class="separador color-rojo"></div>
+            <p>Esta API es <span class="texto-negrita">solo de consumo</span>. - Sólo el método <span
+                    class="texto-negrita">HTTP GET</span> está
+                disponible
+                para los diferentes recurosos.
+
+            <p>No se requiere autenticación para acceder a esta API, todos los recursos están totalmente abiertos y
+                disponibles.</p>
+            <h2>Paginación</h2>
+            <p>
+                Al llamar a cualquier 'endpoint' de la API, esta devolverá todos los elementos. Si se desea estos pueden
+                ser devueltos mediante "páginas" agregando una barra al final del endpoint.
+                Por defecto, una "página" contendrá hasta 20 recursos. Si desea cambiar este valor, añada un
+                parámetro de consulta 'size' a la solicitud GET. También puede ordenar los elemenots de la "página" por
+                algún atributo si el endpoint lo permite agregando el parámetro 'sort'
+            </p>
+        </div>
 
         <section id="enemigos" class="seccion">
 

@@ -49,6 +49,10 @@
     background-image: var(--color-comp);
 }
 
+.color-rojo {
+    background-color: var(--fondo-rojo);
+}
+
 @font-face {
     font-family: NotoSans;
     src: url(../fonts/NotoSans-Regular.ttf);
