@@ -37,6 +37,18 @@
     background-color: var(--color-equipo);
 }
 
+.color-magic {
+    background-color: var(--color-magic);
+}
+
+.color-vida {
+    background-color: var(--color-vida);
+}
+
+.color-comp {
+    background-image: var(--color-comp);
+}
+
 @font-face {
     font-family: NotoSans;
     src: url(../fonts/NotoSans-Regular.ttf);

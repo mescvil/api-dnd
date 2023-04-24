@@ -63,6 +63,9 @@
                 <a href="#trasfondo">
                     <li class="lista lista-vida trasfondo">Trasfondos</li>
                 </a>
+                <a href="#alineamiento">
+                    <li class="lista lista-vida alineamiento">Alineamientos</li>
+                </a>
                 <a href="#idiomas">
                     <li class="lista lista-vida idiomas">Idiomas</li>
                 </a>
@@ -203,7 +206,7 @@
                     <tr>
                         <td>alineamiento</td>
                         <td>Alineamiento moral del enemigo</td>
-                        <td>String</td>
+                        <td>Enum de <a href="#alineamiento">Alineamientos</a></td>
                     </tr>
                     <tr>
                         <td>tipo</td>
@@ -1076,7 +1079,7 @@
 
             <h2>Equipamiento / Armas <span class="texto-gris">(endpoint)</span></h2>
             <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
-                    href="http://rrr2dam.com/api/clases/especialidades/habilidades"><code>http://rrr2dam.com/api/clases/especialidades/habilidades</code></a>
+                    href="http://rrr2dam.com/api/equipamiento/armas"><code>http://rrr2dam.com/api/equipamiento/armas</code></a>
             </p>
 
             <div class="contenedor-json">
@@ -1172,31 +1175,508 @@
 
         </section>
 
-        <section id="armaduras">
-            <h1>
-                Armaduras
-            </h1>
+        <section id="armaduras" class="seccion">
+
+            <h1>Armaduras</h1>
+            <div class="separador color-equipo"></div>
+
+            <h2>Equipamiento / Armaduras <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/armaduras"><code>http://rrr2dam.com/api/equipamiento/armaduras</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Armadura",
+        "elementos": 13,
+        "resultado": [
+            {
+                "nombre": "Armadura de Placas",
+                "tipo": "Pesada",
+                "peso": 65,
+                "claseArmadura": "18",
+                "precio": "1500 piezas de oro",
+                "fuerzaRequerida": 15,
+                "desventajaSigilo": true
+            },
+                .
+                .
+                .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/armaduras/Armadura de Placas"><code>http://rrr2dam.com/api/equipamiento/armaduras/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Armadura de Placas",
+        "tipo": "Pesada",
+        "peso": 65,
+        "claseArmadura": "18",
+        "precio": "1500 piezas de oro",
+        "fuerzaRequerida": 15,
+        "desventajaSigilo": true
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Armadura <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del arma</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>tipo</td>
+                        <td>Clasificación de la armadura por peso</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>peso</td>
+                        <td>Peso de la armadura en libras</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>claseArmadura</td>
+                        <td>Umbral de la armadura</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>precio</td>
+                        <td>Precio de la armadura en tiendas</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>fuerzaRequerida</td>
+                        <td>Fureza necesaria para portar la armadura</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>desventajaSigilo</td>
+                        <td>Penalización por usar la armadura en sigilo</td>
+                        <td>Boolean</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="magic">
-            <h1>
-                Hechizos
-            </h1>
+
+        <section id="magic" class="seccion">
+
+            <h1>Hechizos</h1>
+            <div class="separador color-magic"></div>
+
+            <h2>Equipamiento / Hechizos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-magic">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/hechizos"><code>http://rrr2dam.com/api/equipamiento/hechizos</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Hechizo",
+        "elementos": 13,
+        "resultado": [
+            {
+                "nombre": "Agarre Electrizante",
+                "nivel": 0,
+                "tiempoLanzamiento": "1 acción",
+                "alcance": 0,
+                "duracion": "0",
+                "tiradaSalvacion": "No Tiene",
+                "descripcion": "Un relámpago salta de tu mano para dar una 
+                                descarga eléctrica a la criatura que intentas 
+                                tocar. Haz un ataque de conjuro..."
+            },
+                .
+                .
+                .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-magic">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/hechizos/Agarre Electrizante"><code>http://rrr2dam.com/api/equipamiento/hechizos/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Agarre Electrizante",
+        "nivel": 0,
+        "tiempoLanzamiento": "1 acción",
+        "alcance": 0,
+        "duracion": "0",
+        "tiradaSalvacion": "No Tiene",
+        "descripcion": "Un relámpago salta de tu mano para dar una 
+                        descarga eléctrica a la criatura que intentas 
+                        tocar. Haz un ataque de conjuro..."
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Hechizo <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del hechizo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>nivel</td>
+                        <td>Nivel del hechizo</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>tiempoLanzamiento</td>
+                        <td>Acciones necesarias durante el combate para su uso</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>alcance</td>
+                        <td>Alcance del hechizo en pies</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>duracion</td>
+                        <td></td>
+                        <td>String
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>tiradaSalvacion</td>
+                        <td></td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del hechizo</td>
+                        <td>Integer</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="trasfondo">
-            <h1>
-                Trasfondos
-            </h1>
+
+        <section id="trasfondo" class="seccion">
+
+            <h1>Trasfondos</h1>
+            <div class="separador color-vida"></div>
+
+            <h2>Trasfondos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
+                    href="http://rrr2dam.com/api/trasfondos"><code>http://rrr2dam.com/api/trasfondos</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Trasfondo",
+        "elementos": 13,
+        "resultado": [
+            {
+                "nombre": "Acólito",
+                "descripcion": "Has dedicado tu vida al servicio de un templo 
+                                de un dios específico o un panteón de dioses. 
+                                Actúas como intermediario entre el reino..."
+                "competencias": [
+                    .
+                    .
+                    .
+                ]
+            },
+                .
+                .
+                .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
+                    href="http://rrr2dam.com/api/trasfondos/Acólito"><code>http://rrr2dam.com/api/trasfondos/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        "nombre": "Acólito",
+        "descripcion": "Has dedicado tu vida al servicio de un templo 
+                        de un dios específico o un panteón de dioses. 
+                        Actúas como intermediario entre el reino..."
+        "competencias": [
+            .
+            .
+            .
+        ]
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Trasfondo <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del trasfondo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del trasfondo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>competencias</td>
+                        <td>Competencias del trasfondo</td>
+                        <td>Lista de <a href="#competencias">Competencias</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="idiomas">
-            <h1>
-                Idiomas
-            </h1>
+
+        <section id="alineamiento" class="seccion">
+
+            <h1>Alineamientos</h1>
+            <div class="separador color-vida"></div>
+
+            <h2>Trasfondos / Alineamientos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
+                    href="http://rrr2dam.com/api/trasfondos/alineamientos"><code>http://rrr2dam.com/api/trasfondos/alineamientos</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "String",
+        "elementos": 7,
+        "resultado": [ 
+            "Neutral puro",
+            "Neutral malo",
+            "Legal malo",
+            "Caótico malo",
+            "Legal bueno",
+            "Neutral bueno",
+            "Caótico neutral"
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Alineamiento <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del alineamiento</td>
+                        <td>String</td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
-        <section id="competencias">
-            <h1>
-                Competencias
-            </h1>
+
+        <section id="idiomas" class="seccion">
+
+            <h1>Idiomas</h1>
+            <div class="separador color-vida"></div>
+
+            <h2>Trasfondos / Idiomas <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
+                    href="http://rrr2dam.com/api/trasfondos/idiomas"><code>http://rrr2dam.com/api/trasfondos/idiomas</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Idioma",
+        "elementos": 8,
+        "resultado": [ 
+        {
+            "nombre": "Dracónico"
+        },
+        {
+            "nombre": "Elfico"
+        },
+            .
+            .
+            .
+
+        ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Idioma <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del idioma</td>
+                        <td>String</td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
+
+        <section id="competencias" class="seccion">
+
+            <h1>Competencias</h1>
+            <div class="separador color-comp"></div>
+
+            <h2>Competencias <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-comp">GET</span><a
+                    href="http://rrr2dam.com/api/competencias"><code>http://rrr2dam.com/api/competencias</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        "tipo": "Competencia",
+        "elementos": 13,
+        "resultado": [
+            {
+
+
+            },
+                .
+                .
+                .
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-comp">GET</span><a
+                    href="http://rrr2dam.com/api/competencia"><code>http://rrr2dam.com/api/competencia/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Trasfondo <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td></td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td></td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
     </div>
 </body>
 
