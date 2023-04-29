@@ -1,0 +1,70 @@
+/* ===== 1700px ===== */
+
+@media only screen and (max-width: 1700px) {
+
+    .contenedor-json,
+    .seccion>table {
+        width: 70%;
+    }
+}
+
+
+/* ===== Pantalla de 1440p ===== */
+
+@media only screen and (max-width: 1440px) {
+    aside {
+        width: 18%;
+    }
+
+    #main {
+        width: 82%;
+        margin-left: 18%;
+    }
+
+    .contenedor-json,
+    .seccion>table {
+        width: 75%;
+    }
+}
+
+/* ===== 1350px ===== */
+
+@media only screen and (max-width: 1350px) {
+
+    .contenedor-json,
+    .seccion>table {
+        width: 80%;
+    }
+}
+
+/* ===== 1210px ===== */
+
+@media only screen and (max-width: 1350px) {
+
+    .contenedor-json,
+    .seccion>table {
+        width: 95%;
+    }
+}
+
+/* ===== Pantalla de 1024p ===== */
+
+@media only screen and (max-width: 1024px) {
+    #banner>h1 {
+        font-size: 80px;
+    }
+
+    aside {
+        width: 20%;
+    }
+
+    #main {
+        width: 80%;
+        margin-left: 20%;
+    }
+
+    .contenedor-json,
+    .seccion>table {
+        width: 100%;
+    }
+}
