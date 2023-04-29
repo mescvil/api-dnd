@@ -19,6 +19,10 @@
     --color-comp: linear-gradient(-45deg,
             rgba(255, 106, 0, 0.422) 50%,
             rgba(112, 3, 52, 0.68) 50%);
+
+    --rojo-json: #c5625b;
+    --verde-json: #69ab74;
+    --naranja-json: #6a3cc5;
 }
 
 .color-enemigo {
@@ -51,6 +55,18 @@
 
 .color-rojo {
     background-color: var(--fondo-rojo);
+}
+
+.color-propiedad {
+    color: var(--rojo-json);
+}
+
+.color-string {
+    color: var(--verde-json);
+}
+
+.color-integer {
+    color: var(--naranja-json);
 }
 
 @font-face {
