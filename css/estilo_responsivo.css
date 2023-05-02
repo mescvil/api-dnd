@@ -68,3 +68,58 @@
         width: 100%;
     }
 }
+
+/* ===== Pantalla de movil y tableta ===== */
+
+@media only screen and (max-width: 1000px) {
+    aside {
+        display: none;
+    }
+
+    #main {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #main {
+        padding: 0px;
+    }
+
+
+    /* Textos */
+
+    .seccion>h1 {
+        font-size: 50px;
+    }
+
+    .seccion>h2 {
+        font-size: 40px;
+    }
+
+    .seccion>p {
+        font-size: 25px;
+    }
+
+    .seccion>p>a {
+        font-size: 25px;
+    }
+
+    .texto-gris {
+        font-size: 30px;
+    }
+
+    table {
+        font-size: 20px;
+    }
+
+    pre>code {
+        font-size: 20px;
+    }
+
+    .seccion {
+        margin-top: 12px;
+        margin-bottom: 36px;
+    }
+}
