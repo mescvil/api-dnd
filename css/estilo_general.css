@@ -64,7 +64,7 @@ kbd {
     z-index: 2;
 
     width: 100%;
-    height: 50px;
+    height: 5%;
 
     background-color: var(--fondo-tarjeta);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -74,11 +74,15 @@ kbd {
     cursor: pointer;
     border: 1px solid transparent;
     background-color: transparent;
-    height: 50px;
+    display: block;
+    height: 100%;
+    width: 10%;
     font-size: 1.5em;
-
 }
 
+#barra-movil>button>img {
+    width: 100%;
+}
 
 /* ===== Interior ===== */
 
