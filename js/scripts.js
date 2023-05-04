@@ -21,3 +21,9 @@ window.addEventListener("scroll", () => {
 		}
 	});
 });
+
+$(document).ready(function () {
+	$("#click").click(function () {
+		$("aside").toggle();
+	});
+});

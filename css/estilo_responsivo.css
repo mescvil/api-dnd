@@ -72,12 +72,35 @@
 /* ===== Pantalla de movil y tableta ===== */
 
 @media only screen and (max-width: 1000px) {
+
+    #barra-movil {
+        display: block;
+    }
+
     aside {
+        margin-top: 49px;
+
         display: none;
+        z-index: 5;
+        width: 100%;
+        height: 99%
+    }
+
+    aside>img {
+        display: none;
+    }
+
+    aside>nav {
+        text-align: center;
+    }
+
+    .lista {
+        font-size: x-large;
     }
 
     #main {
         width: 100%;
+        margin-top: 80px;
         margin-left: 0;
     }
 }
