@@ -81,7 +81,7 @@ kbd {
 }
 
 #barra-movil>button>img {
-    width: 100%;
+    height: 100%;
 }
 
 /* ===== Interior ===== */
@@ -171,6 +171,16 @@ kbd {
 .seccion>p {
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.seccion>ul,
+.seccion>ol {
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+ol>li {
+    margin-bottom: 8px;
 }
 
 /* ===== Contendor JSON ===== */

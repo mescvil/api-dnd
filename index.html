@@ -105,14 +105,133 @@
 
             <p>No se requiere autenticación para acceder a esta API, todos los recursos están totalmente abiertos y
                 disponibles.</p>
+
+            <h2>Uso Legítimo (Fair Use)</h2>
+            <p>En nombre de Miguel Escoz y Rafael Rus, entendemos y respetamos los derechos de autor de Dungeons &
+                Dragons (D&D) y nos
+                esforzamos por operar dentro de los límites del "fair use" (uso legítimo) en relación a su contenido. El
+                "fair use" es una excepción en las leyes de derechos de autor que permite el uso limitado de material
+                protegido sin obtener una autorización expresa del titular de los derechos. A continuación, se
+                establecen los principios que seguimos en esta web para cumplir con las pautas del "fair use"
+                en relación a D&D:</p>
+            <ol>
+                <li>Propósitos educativos: Utilizamos información, reglas y otros elementos de D&D con el fin de
+                    presentar el proyecto final de ciclo superior, responsabilizandonos de su debido uso y su posterior
+                    eliminación.</li>
+                <li>Uso limitado y selectivo: Seleccionamos y utilizamos extractos y ejemplos de material protegido de
+                    D&D de manera limitada y selectiva. Nos aseguramos de que el uso de dicho material sea relevante
+                    para los temas que estamos abordando y que no reemplace la necesidad de adquirir el material
+                    original.</li>
+                <li>Atribución y reconocimiento: Siempre proporcionamos atribución adecuada y reconocemos la propiedad
+                    intelectual de D&D. Incluimos referencias claras y enlaces a las fuentes originales cuando
+                    utilizamos contenido específico de D&D, de modo que los creadores y editores reciban el crédito que
+                    les corresponde.</li>
+                <li>No afectar negativamente el mercado: Nos aseguramos de que nuestro uso de material protegido no
+                    cause un impacto negativo en el mercado potencial de D&D o en la venta de sus productos. Nuestro
+                    enfoque se centra en la educación y la promoción de D&D, y no en la explotación comercial del
+                    material original.</li>
+            </ol>
+            <p>Es importante destacar que este apartado sobre "fair use" es informativo y no constituye asesoramiento
+                legal. Siempre recomendamos a nuestros usuarios y visitantes que consulten a profesionales
+                especializados en derecho de autor para obtener orientación específica sobre sus proyectos individuales.
+            </p>
+
             <h2>Paginación</h2>
             <p>
                 Al llamar a cualquier 'endpoint' de la API, esta devolverá todos los elementos. Si se desea estos pueden
                 ser devueltos mediante "páginas" agregando una barra al final del endpoint.
                 Por defecto, una "página" contendrá hasta 20 recursos. Si desea cambiar este valor, añada un
                 parámetro de consulta 'size' a la solicitud GET. También puede ordenar los elemenots de la "página" por
-                algún atributo si el endpoint lo permite agregando el parámetro 'sort'
+                algún atributo si el endpoint lo permite agregando el parámetro 'sort'. Ejemplo:
+                <code>{endpoint}/?page=0&size=31</code>
             </p>
+            <p>Actualmente los siguientes endpoint disponen de paginación:</p>
+            <ul>
+                <li>Rasgos de clase</li>
+                <li>Enemigos</li>
+                <li>Acciones enemigas</li>
+                <li>Rasgos enemigos</li>
+                <li>Hechizos</li>
+                <li>Rasgos de raza</li>
+                <li>Trasfondos</li>
+                <li>Competencias</li>
+            </ul>
+
+            <h2>Ejemplo de paginación</h2>
+            <div class="separador color-rojo"></div>
+            <p class="p-peticion"><span class="tipo-peticion color-rojo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos"><code>http://rrr2dam.com/api/enemigos/?page=0&size=31&sort=fuerza</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">61</span>,
+        <span class="color-propiedad">"paginas"</span>: <span class="color-integer">2</span>,
+        <span class="color-propiedad">"anterior"</span>: <span class="color-string">null</span>,
+        <span class="color-propiedad">"siguiente"</span>: <span class="color-integer">2</span>,
+        <span class="color-propiedad">"resultado"</span>: [
+            {
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Fuego Fatuo"</span>,
+                <span class="color-propiedad">"imagen"</span>: <span class="color-string">"img/fuegoFauto.png"</span>,
+                <span class="color-propiedad">"alineamiento"</span>: <span class="color-string">"Caótico_malo"</span>,
+                <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Muerto viviente"</span>,
+                <span class="color-propiedad">"tamanio"</span>: <span class="color-string">"Diminuto"</span>",
+
+                ...
+
+                <span class="color-propiedad">"puntosGolpe"</span>: <span class="color-integer">22</span>,
+                <span class="color-propiedad">"fuerza"</span>: <span class="color-integer">1</span>,
+                <span class="color-propiedad">"destreza"</span>: <span class="color-integer">28</span>,
+            },
+            
+            ...
+
+            ]
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>elementos</td>
+                        <td>Número total de elementos</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>paginas</td>
+                        <td>Número total de paginas</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>anterior</td>
+                        <td>Página anterior (null si no tiene)</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>siguiente</td>
+                        <td>Página siguiente (null si no tiene)</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>resultado</td>
+                        <td>Resultado de la busqueda</td>
+                        <td>Lista de elementos</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <section id="enemigos" class="seccion">
@@ -1320,13 +1439,13 @@
                     </tr>
                     <tr>
                         <td>duracion</td>
-                        <td></td>
+                        <td>Duración del hechizo</td>
                         <td>String
                         </td>
                     </tr>
                     <tr>
                         <td>tiradaSalvacion</td>
-                        <td></td>
+                        <td>Si se necesitara, tirada contraria al efecto del hechizo</td>
                         <td>String</td>
                     </tr>
                     <tr>
@@ -1548,10 +1667,11 @@
     {
     
         <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Competencia"</span>,
-        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">56</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">50</span>,
         <span class="color-propiedad">"resultado"</span>: [
             {
-
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Competencia con Armaduras Ligeras"</span>
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Te permite usar cualquier armadura catalogada como Ligera"</span>
 
             },
 
@@ -1573,14 +1693,15 @@
                     <code>
     {
 
-
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Competencia con Armaduras Ligeras"</span>
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Te permite usar cualquier armadura catalogada como Ligera"</span>
     
     }             
                 </code>
             </pre>
             </div>
 
-            <h2>Trasfondo <span class="texto-gris">(entidad)</span></h2>
+            <h2>Competencias <span class="texto-gris">(entidad)</span></h2>
             <table>
                 <thead>
                     <tr>
@@ -1592,12 +1713,12 @@
                 <tbody>
                     <tr>
                         <td>nombre</td>
-                        <td></td>
+                        <td>Nombre de la competencia</td>
                         <td>String</td>
                     </tr>
                     <tr>
                         <td>descripcion</td>
-                        <td></td>
+                        <td>Descripción de la comptencia</td>
                         <td>String</td>
                     </tr>
                 </tbody>

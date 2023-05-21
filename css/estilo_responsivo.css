@@ -55,6 +55,7 @@
     }
 
     aside {
+        display: block;
         width: 20%;
     }
 
@@ -121,6 +122,10 @@
     }
 
     .seccion>p {
+        font-size: 25px;
+    }
+
+    .seccion>ul {
         font-size: 25px;
     }
 
