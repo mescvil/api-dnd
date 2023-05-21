@@ -215,3 +215,21 @@ td>a {
     height: fit-content;
     margin: 10px;
 }
+
+/* ===== Footer ===== */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px;
+    border-radius: 8px;
+
+    background-color: var(--fondo-azul);
+}
+
+.imagen-footer {
+    width: 50px;
+}
